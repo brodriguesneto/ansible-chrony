@@ -1,0 +1,20 @@
+---
+- name: Restart Chrony service
+  systemd: 
+    name: chrony
+    state: restarted
+  notify: Check if chrony is synchronized
+
+- name: Check if chrony is synchronized
+  command: timedatectl status
+  retries: 6  
+  delay: 5
+  register: result
+  until: "'synchronized: yes' in result.stdout"
+  ignore_errors: "{{ ansible_check_mode }}"
+
+- name: Restart Cron service if exists
+  systemd:
+    name: cron
+    state: restarted
+  when: "'enabled' in cron_daemon.stdout"

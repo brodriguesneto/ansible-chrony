@@ -1,0 +1,49 @@
+---
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - chrony
+    - tzdata
+
+- name: Configure chrony.conf
+  template:
+    src: chrony.conf.j2
+    dest: /etc/chrony.conf
+  notify:
+    - Restart Chrony service
+
+- name: Disable and stop systemd-timesyncd
+  systemd:
+    name: systemd-timesyncd
+    enabled: no
+    state: stopped
+
+- name: Enable and start Chrony service
+  systemd:
+    name: chrony
+    enabled: yes
+    state: started
+
+- name: Validate if systemd's cron.service exists
+  stat:
+    path: /lib/systemd/system/cron.service
+  register: cron_service
+  changed_when: False
+  check_mode: False
+
+- name: Validate cron.service status
+  command: systemctl status cron.service
+  when: cron_service.stat.exists
+  register: cron_daemon
+  failed_when:  cron_daemon.rc == 2
+  changed_when: False
+  check_mode: False
+
+- name: Configure Timezone
+  timezone:
+    name: "{{ chrony_timezone }}"
+  ignore_errors: "{{ ansible_check_mode }}"
+  notify: Restart Cron service if exists

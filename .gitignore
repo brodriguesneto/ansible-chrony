@@ -1,0 +1,34 @@
+# Vagrant
+**/.vagrant
+
+# Vim
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Ansible
+**/*.retry
+**/.ansible
+**/ansible_run.out
+
+# Terraform
+**/*tfstate.backup
+**/*tfstate.*.backup
+**/*.plan
+**/.terraform*
+**/terraform.tfstate*
+**/backend.tfvars
+
+# VSCODE
+.vscode
