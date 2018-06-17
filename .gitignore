@@ -20,7 +20,6 @@ Icon
 # Ansible
 **/*.retry
 **/.ansible
-**/ansible_run.out
 
 # Terraform
 **/*tfstate.backup
