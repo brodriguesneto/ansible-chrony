@@ -2,7 +2,6 @@
 galaxy_info:
   author: Boaventura Rodrigues Neto
   description: An Ansible role that installs and configures Chrony service on Linux sets Timezone
-  company: Ever Proven
   license: Apache License 2.0
   min_ansible_version: 2.5
   platforms:
