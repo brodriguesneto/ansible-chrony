@@ -2,7 +2,7 @@ chrony
 ======
 
 [![Build Status](https://travis-ci.org/everproven/ansible-chrony.svg?branch=master)](https://travis-ci.org/brodriguesneto/ansible-chrony)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-brodriguesneto.chrony-blue.svg)](https://galaxy.ansible.com/brodriguesneto/chrony/)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-brodriguesneto.ansible_chrony-blue.svg)](https://galaxy.ansible.com/brodriguesneto/chrony/)
 
 An Ansible role that installs and configures [Chrony] service on Linux and sets Timezone.
 
