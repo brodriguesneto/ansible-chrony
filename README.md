@@ -2,7 +2,7 @@ chrony
 ======
 
 [![Build Status](https://travis-ci.org/brodriguesneto/ansible-chrony.svg?branch=master)](https://travis-ci.org/brodriguesneto/ansible-chrony)
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-brodriguesneto.ansible_chrony-blue.svg)](https://galaxy.ansible.com/brodriguesneto/ansible_chrony/)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-brodriguesneto.chrony-blue.svg)](https://galaxy.ansible.com/brodriguesneto/ansible_chrony/)
 
 An Ansible role that installs and configures [Chrony] service on Linux and sets Timezone.
 
@@ -69,9 +69,9 @@ License
 Author Information
 ------------------
 
-[Ever Proven]
+[Boaventura Rodrigues Neto]
 
 [Chrony]: https://chrony.tuxfamily.org/
 [Cron]: https://en.wikipedia.org/wiki/Cron
 [Apache License 2.0]: https://github.com/everproven/ansible-chrony/blob/master/LICENSE
-[Ever Proven]: https://github.com/everproven
+[Boaventura Rodrigues Neto]: https://www.linkedin.com/in/brodriguesneto/
