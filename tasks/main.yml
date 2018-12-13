@@ -35,7 +35,7 @@
   check_mode: False
 
 - name: Validate cron.service status
-  command: systemctl status cron.service
+  command: /bin/systemctl status cron.service
   when: cron_service.stat.exists
   register: cron_daemon
   failed_when:  cron_daemon.rc == 2
