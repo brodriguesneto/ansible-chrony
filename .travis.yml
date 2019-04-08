@@ -11,7 +11,7 @@ python:
 
 before_install:
   - deactivate
-  - sudo -H pip install ansible=="2.5.5" docker-py
+  - sudo -H pip install ansible=="2.7.10" docker-py
 
 before_script:
   - cd tests
