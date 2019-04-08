@@ -28,9 +28,9 @@ __chrony_servers__: The chrony pool servers to synchronize from with its default
 
 ```YAML
 chrony_servers:
-  - a.chrony.br
-  - b.chrony.br
-  - c.chrony.br
+  - a.ntp.br
+  - b.ntp.br
+  - c.ntp.br
 ```
 
 __chrony_timezone__: The Timezone to configure system-wide with its default value.
